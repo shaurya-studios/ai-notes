@@ -1,4 +1,3 @@
-
 import { NativeChapter } from '../types/content';
 import { chapter1 } from './chapters/chapter1';
 import { chapter2 } from './chapters/chapter2';
@@ -9,6 +8,7 @@ import { chapter6 } from './chapters/chapter6';
 import { chapter7 } from './chapters/chapter7';
 import { chapter8 } from './chapters/chapter8';
 import { chapter9 } from './chapters/chapter9';
+import { chapter10 } from './chapters/chapter10';
 
 export const CHAPTER_DATABASE: NativeChapter[] = [
   chapter1,
@@ -19,5 +19,6 @@ export const CHAPTER_DATABASE: NativeChapter[] = [
   chapter6,
   chapter7,
   chapter8,
-  chapter9
+  chapter9,
+  chapter10
 ];

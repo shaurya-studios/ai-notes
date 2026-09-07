@@ -1,59 +1,32 @@
 import { NativeChapter } from '../../types/content';
 export const chapter6: NativeChapter = {
-  id: 'ai-project-cycle', number: 'VI', title: 'Revisiting AI Project Cycle',
+  id: 'intro-to-ai', number: 'VI', title: 'Part B: Introduction to AI',
   pages: [
     {
       pageNumber: 1,
       blocks: [
-        { type: 'h1', content: 'Session 1: AI Project Cycle' },
-        { type: 'h2', content: 'Definition' },
-        { type: 'p', content: 'A cyclical process followed to complete an AI project, from identifying the problem to deploying the solution.' },
-        { type: 'h3', content: 'Stages of the AI Project Cycle' },
-        { type: 'ol', items: [
-          'Problem Scoping: Define the goal/problem, identify parameters affecting it.',
-          'Data Acquisition: Collect data from reliable sources. Data is the base of AI.',
-          'Data Exploration: Study patterns, trends, relationships in data. Decide which type of model to build.',
-          'Model Building: Select suitable AI models, test models -> find the most efficient one.',
-          'Model Evaluation: Test model on new/unseen data, evaluate performance.',
-          'Deployment: Deploy in real-world environment. Ensure smooth operation.'
-        ]}
+        { type: 'h1', content: 'Session 1: Foundations of AI' },
+        { type: 'p', content: 'Artificial Intelligence (AI) is the ability of machines to simulate human intelligence. A machine is considered "intelligent" if it can learn, reason, and solve problems.' },
+        { type: 'h2', content: 'AI vs ML vs DL' },
+        { type: 'ul', items: [
+          'Artificial Intelligence (AI): The overarching field of making computers think like humans.',
+          'Machine Learning (ML): A subset of AI. Algorithms learn from data without being explicitly programmed.',
+          'Deep Learning (DL): A subset of ML inspired by the human brain (Artificial Neural Networks), used for highly complex tasks like facial recognition.'
+        ]},
+        { type: 'callout', style: 'important', content: 'All Deep Learning is ML, and all ML is AI. However, not all AI is Machine Learning (e.g., Rule-based systems).' }
       ]
     },
     {
       pageNumber: 2,
       blocks: [
-        { type: 'h1', content: 'Session 2: AI Domains' },
-        { type: 'p', content: 'AI becomes intelligent based on the training data it receives. Depending on the type of data fed into an AI model, it can be classified into 3 main domains.' },
-        { type: 'h2', content: 'Statistical Data' },
-        { type: 'p', content: 'Related to data systems and processes. Collects, stores, and analyzes large datasets to derive meaning.' },
-        { type: 'ul', items: ['Examples: Price Comparison Websites, Recommendation systems in tech, hospitality, automobiles.'] },
-        { type: 'h2', content: 'Computer Vision' },
-        { type: 'p', content: 'Ability of machines to analyze and understand visual data (images, videos, thermal).' },
-        { type: 'ul', items: ['Examples: Agricultural Monitoring (crop health), Surveillance Systems.'] },
-        { type: 'h2', content: 'Natural Language Processing' },
-        { type: 'p', content: 'Interaction between computers and humans using natural language (spoken/written).' },
-        { type: 'ul', items: ['Examples: Email filters (spam detection), Machine Translation (Google Translate).'] }
-      ]
-    },
-    {
-      pageNumber: 3,
-      blocks: [
-        { type: 'h1', content: 'Session 3: Ethical Frameworks of AI' },
-        { type: 'h2', content: 'What are Frameworks?' },
-        { type: 'p', content: 'Step-by-step guides for solving problems. Provide structured approach ensuring all factors are considered.' },
-        { type: 'h3', content: 'Ethical Frameworks' },
-        { type: 'p', content: 'Ethics = values/morals to distinguish right vs wrong. Ethical frameworks ensure AI decisions do not cause unintended harm.' },
-        { type: 'h3', content: 'Need for Ethical Frameworks in AI' },
-        { type: 'ul', items: [
-          'AI influences/decides outcomes (e.g., biased hiring algorithm).',
-          'To ensure AI makes morally acceptable recommendations.',
-          'Prevent harm and bias before deployment.'
+        { type: 'h2', content: 'Domains of AI' },
+        { type: 'table', headers: ['Domain', 'Description', 'Applications'], rows: [
+          ['Data (Data Science)', 'Extracting insights from structured/unstructured data.', 'Recommendation systems, price prediction.'],
+          ['Computer Vision (CV)', 'Enabling machines to understand visual data.', 'Self-driving cars, face unlock.'],
+          ['Natural Language Processing (NLP)', 'Enabling machines to understand text and speech.', 'Chatbots, language translation.']
         ]},
-        { type: 'h3', content: 'Types of Ethical Frameworks' },
-        { type: 'ul', items: [
-          'Sector Based: Designed for specific industries (e.g. Bioethics in healthcare).',
-          'Value Based: Based on moral philosophies & values (Rights-based, Utility-based, Virtue-based).'
-        ]}
+        { type: 'h2', content: 'Smart vs. AI' },
+        { type: 'p', content: 'Not all smart devices use AI. A fully automatic washing machine is "Smart" (it follows pre-programmed rules based on sensors), but it is NOT AI because it does not learn from data to improve its washing cycle over time.' }
       ]
     }
   ]
