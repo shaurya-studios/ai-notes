@@ -1,0 +1,8 @@
+{
+  "name": "Study Notes Viewer",
+  "description": "A web application to parse, validate, and view deterministic study note images.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
