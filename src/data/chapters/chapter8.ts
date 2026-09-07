@@ -6,32 +6,47 @@ export const chapter8: NativeChapter = {
       pageNumber: 1,
       blocks: [
         { type: 'h1', content: 'Session 1: Understanding Computer Vision' },
-        { type: 'p', content: 'Computer Vision (CV) is a domain of AI that enables computers to derive meaningful information from digital images, videos, and other visual inputs.' },
+        { type: 'p', content: 'Computer Vision (CV) is a domain of AI that enables computers and systems to derive meaningful information from digital images, videos, and other visual inputs, and take actions or make recommendations based on that information.' },
         { type: 'h2', content: 'How Computers See Images' },
-        { type: 'p', content: 'Computers do not possess eyes. They perceive an image as a matrix (grid) of numbers representing Pixels (Picture Elements).' },
+        { type: 'p', content: 'Humans see images using eyes and the brain. Computers, however, perceive an image as a vast grid (matrix) of numbers representing Pixels (Picture Elements).' },
         { type: 'ul', items: [
-          'Grayscale Images: A 2D matrix where each pixel is represented by a single number from 0 (Black) to 255 (White).',
-          'RGB (Color) Images: A 3D matrix composed of three layers (Red, Green, Blue). Each layer assigns a value from 0-255 to mix and create millions of colors.'
+          'Grayscale Images: Represented as a 2-Dimensional matrix (width x height). Each pixel has a single intensity value ranging from 0 (Pure Black) to 255 (Pure White).',
+          'RGB (Color) Images: Represented as a 3-Dimensional matrix. It consists of three separate 2D layers: Red, Green, and Blue. Each layer holds values from 0-255. By combining these three primary colors at different intensities, computers can generate millions of colors.'
         ]},
-        { type: 'h2', content: 'Features in CV' },
-        { type: 'p', content: 'A "Feature" is a measurable piece of data in an image (like edges, corners, or specific colors). Algorithms detect these features to recognize objects (e.g., detecting the curve of an eye in facial recognition).' }
+        { type: 'callout', style: 'important', content: 'Image Resolution is defined by the number of pixels. An image that is 1920x1080 contains over 2 million pixels, meaning the computer must analyze 2 million numerical values!' }
       ]
     },
     {
       pageNumber: 2,
       blocks: [
-        { type: 'h2', content: 'Key Computer Vision Tasks' },
-        { type: 'table', headers: ['Task', 'Description'], rows: [
-          ['Image Classification', 'Assigning a label to the entire image (e.g., "This is a dog").'],
-          ['Object Detection', 'Identifying objects and drawing bounding boxes around them.'],
-          ['Facial Recognition', 'Verifying a person\'s identity based on facial geometry.']
-        ]},
-        { type: 'h2', content: 'Real-World Applications' },
+        { type: 'h1', content: 'Features in Computer Vision' },
+        { type: 'p', content: 'To recognize an object, AI models don\'t look at the entire image at once. Instead, they look for specific "Features".' },
+        { type: 'p', content: 'A Feature is a measurable piece of data in an image that is unique to the object being identified. Examples of features include:' },
         { type: 'ul', items: [
-          'Autonomous Vehicles: Detecting pedestrians, lanes, and traffic lights.',
-          'Medical Imaging: Analyzing X-rays and MRIs to detect diseases like tumors.',
-          'Retail: Amazon Go stores tracking items picked up by customers.',
-          'Security: Biometric attendance systems and surveillance.'
+          'Edges and boundaries.',
+          'Corners and distinct shapes.',
+          'Specific color patterns and textures.',
+          'Facial landmarks (e.g., the distance between eyes, the curve of a jawline).'
+        ]},
+        { type: 'h2', content: 'Key Computer Vision Tasks' },
+        { type: 'table', headers: ['Task', 'Description', 'Example'], rows: [
+          ['Image Classification', 'Assigning a single label to the entire image based on its main content.', 'Tagging a photo as "Dog" or "Cat".'],
+          ['Object Detection', 'Identifying multiple specific objects within an image and drawing bounding boxes around them.', 'A self-driving car identifying pedestrians and street signs.'],
+          ['Semantic Segmentation', 'Classifying every single pixel in the image to exact object boundaries.', 'Medical AI highlighting the exact shape of a tumor.'],
+          ['Facial Recognition', 'Verifying a person\'s identity based on their unique facial geometry.', 'Unlocking a phone with Face ID.']
+        ]}
+      ]
+    },
+    {
+      pageNumber: 3,
+      blocks: [
+        { type: 'h1', content: 'Real-World Applications of Computer Vision' },
+        { type: 'ul', items: [
+          'Autonomous Vehicles: Tesla and Waymo cars use cameras to detect lanes, read traffic lights, and avoid pedestrians in real-time.',
+          'Medical Diagnostics: Analyzing X-rays, MRIs, and CT scans to detect diseases, fractures, or cancer earlier than human doctors.',
+          'Retail and E-commerce: Amazon Go cashier-less stores use CV to track which items a customer picks up from the shelf.',
+          'Security and Surveillance: Biometric attendance systems and smart CCTV cameras tracking suspicious activities.',
+          'Agriculture: Drones flying over fields using computer vision to identify crop diseases and weed infestations.'
         ]}
       ]
     }
