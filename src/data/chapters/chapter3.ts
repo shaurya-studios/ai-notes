@@ -1,43 +1,43 @@
 import { NativeChapter } from '../../types/content';
 export const chapter3: NativeChapter = {
-  id: 'ict-skills', number: 'III', title: 'Part A: ICT Skills - II',
+  id: 'ict-skills', number: 'III', title: 'Part A: ICT Skills-II',
   pages: [
     {
       pageNumber: 1,
       blocks: [
-        { type: 'h1', content: 'Session 1: Operating Systems & Maintenance' },
-        { type: 'p', content: 'Information and Communication Technology (ICT) refers to digital tools used for creating, storing, and communicating information.' },
+        { type: 'h1', content: 'ICT Skills - II' },
+        { type: 'p', content: 'Information and Communication Technology (ICT) refers to all the technology used to handle telecommunications, broadcast media, intelligent building management systems, audiovisual processing and transmission systems, and network-based control and monitoring functions.' },
         { type: 'h2', content: 'Operating System (OS)' },
-        { type: 'p', content: 'An OS is the core software that manages computer hardware and software resources. Examples: Windows, macOS, Linux, Android.' },
+        { type: 'p', content: 'An Operating System is a program that acts as an interface between the software and the computer hardware. It is an integrated set of specialized programs used to manage overall resources and operations of the computer.' },
+        { type: 'h3', content: 'Functions of an Operating System' },
         { type: 'ul', items: [
-          'Functions of OS: Process management, Memory management, File management, Device management, and Security.'
-        ]},
-        { type: 'h2', content: 'Computer Care and Maintenance' },
-        { type: 'p', content: 'Proper maintenance prolongs the life of the computer.' },
-        { type: 'ol', items: [
-          'Physical Care: Keep it clean, avoid eating near it, ensure proper ventilation.',
-          'Internal Care: Empty recycle bin, uninstall unused programs, defragment hard drives.'
+          'Memory Management: Keeps track of primary memory, allocating and de-allocating it.',
+          'Processor Management: Allocates the processor (CPU) to a process and de-allocates it.',
+          'Device Management: Keeps track of all devices. This is also called the I/O controller.',
+          'File Management: Allocates and de-allocates resources, keeps track of information, location, uses, status etc.',
+          'Security: Protects data and information from unauthorized access.'
         ]}
       ]
     },
     {
       pageNumber: 2,
       blocks: [
-        { type: 'h1', content: 'Session 2: Digital Security & Threats' },
-        { type: 'p', content: 'With internet connectivity, securing digital assets is extremely important.' },
-        { type: 'h2', content: 'Common Cyber Threats' },
-        { type: 'table', headers: ['Threat', 'Description'], rows: [
-          ['Virus', 'Malware that attaches to clean files and infects other files.'],
-          ['Worm', 'Malware that replicates itself to spread across networks.'],
-          ['Trojan Horse', 'Malicious software disguised as legitimate software.'],
-          ['Phishing', 'Fake emails designed to steal passwords and data.']
-        ]},
-        { type: 'h2', content: 'Protection Methods' },
+        { type: 'h1', content: 'Basic Computer Operations' },
+        { type: 'h2', content: 'File and Folder Management' },
         { type: 'ul', items: [
-          'Antivirus Software: Install and keep it updated to detect and remove malware.',
-          'Strong Passwords: Use a mix of letters, numbers, and special characters.',
-          'Data Backup: Regularly save important files to an external drive or cloud.',
-          'Firewall: Enable network firewalls to block unauthorized access.'
+          'Creating a File/Folder: Right-click -> New -> Folder/File type.',
+          'Renaming a File/Folder: Right-click -> Rename, or press F2.',
+          'Copying a File/Folder: Select -> Ctrl+C, go to destination -> Ctrl+V.',
+          'Moving a File/Folder: Select -> Ctrl+X, go to destination -> Ctrl+V.',
+          'Deleting a File/Folder: Select -> Delete key (moves to Recycle Bin) or Shift+Delete (permanent deletion).'
+        ]},
+        { type: 'h2', content: 'Protecting the Computer' },
+        { type: 'p', content: 'It is essential to keep computers secure from various threats.' },
+        { type: 'ul', items: [
+          'Antivirus Software: Install and regularly update antivirus programs to detect and remove malicious software.',
+          'Firewalls: Use firewalls to monitor and control incoming and outgoing network traffic.',
+          'Passwords: Use strong, unique passwords for different accounts.',
+          'Updates: Keep the operating system and software updated to patch security vulnerabilities.'
         ]}
       ]
     }

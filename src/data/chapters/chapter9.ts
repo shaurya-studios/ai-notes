@@ -1,70 +1,44 @@
 import { NativeChapter } from '../../types/content';
 export const chapter9: NativeChapter = {
-  id: 'nlp', number: 'IX', title: 'Part B: Natural Language Processing (6.1)',
+  id: 'computer-vision', number: 'IX', title: 'Part B: Computer Vision',
   pages: [
     {
       pageNumber: 1,
       blocks: [
-        { type: 'h1', content: 'Session 1: Introduction to NLP' },
-        { type: 'p', content: 'Natural Language Processing (NLP) is a branch of Artificial Intelligence that deals with the interaction between computers and humans using natural language. The goal of NLP is to enable computers to understand, interpret, and generate human language.' },
-        { type: 'h2', content: 'Components of NLP' },
+        { type: 'h1', content: '1. Introduction to Computer Vision' },
+        { type: 'p', content: 'Computer Vision (CV) is an interdisciplinary scientific field that deals with how computers can gain high-level understanding from digital images or videos. From the perspective of engineering, it seeks to automate tasks that the human visual system can do.' },
+        { type: 'h2', content: 'How Computers See Images' },
+        { type: 'p', content: 'While humans see shapes, colors, and depth, computers perceive an image strictly as a grid of numbers. This grid is called a Matrix.' },
         { type: 'ul', items: [
-          'NLU (Natural Language Understanding): The ability of a machine to understand and interpret human language. It focuses on extracting meaning, intent, and sentiment from text. It handles ambiguities, metaphors, and context.',
-          'NLG (Natural Language Generation): The process of producing meaningful phrases and sentences in the form of natural language from an internal representation. Example: A computer automatically writing a news summary.'
+          'Pixel: The smallest element of a digital image (Picture Element).',
+          'Resolution: The total number of pixels in an image (Width x Height). Higher resolution means more data for the AI to process.'
         ]},
-        { type: 'h2', content: 'Why is NLP Difficult?' },
-        { type: 'p', content: 'Unlike programming languages (e.g., Python, C++) which are highly structured and have strict syntax, human languages are incredibly unstructured and complex. Challenges include:' },
-        { type: 'ul', items: [
-          'Ambiguity: Words can have multiple meanings based on context (e.g., "bank" of a river vs. financial "bank").',
-          'Sarcasm and Irony: Saying the opposite of what is meant.',
-          'Synonyms: Multiple words meaning the same thing.',
-          'Idioms and Slang: Phrases where the literal meaning differs from the actual meaning (e.g., "piece of cake").'
+        { type: 'h2', content: 'Grayscale vs. RGB' },
+        { type: 'table', headers: ['Grayscale Images', 'RGB (Color) Images'], rows: [
+          ['Consists of a single 2D matrix layer.', 'Consists of three separate 2D layers (Red, Green, Blue).'],
+          ['Pixel values range from 0 (Black) to 255 (White).', 'Each layer has values from 0-255. They combine to form millions of colors.'],
+          ['Computationally lighter and faster for AI to process.', 'Computationally heavy, requires more memory and processing power.']
         ]}
       ]
     },
     {
       pageNumber: 2,
       blocks: [
-        { type: 'h1', content: 'Text Normalization' },
-        { type: 'p', content: 'Before a machine can analyze text, the raw text data must be pre-processed and converted into numbers. Text Normalization is the process of cleaning and structuring text.' },
-        { type: 'ol', items: [
-          'Sentence Segmentation: Splitting a large paragraph into individual sentences.',
-          'Tokenization: Breaking down sentences into individual words called "tokens".',
-          'Removing Stop Words: Filtering out frequently occurring words (like "is", "the", "and", "in") that do not add significant meaning or context.',
-          'Stemming: A rule-based process of removing suffixes to reduce a word to its root form. For example, "running", "runs", and "ran" might all be reduced to "run". Note: Stemming can sometimes result in non-dictionary words.',
-          'Lemmatization: Similar to stemming, but more advanced. It uses a vocabulary and morphological analysis to map words to their actual dictionary root (lemma). For example, "better" is mapped to "good".'
-        ]},
-        { type: 'callout', style: 'example', content: 'If the text is: "The boys are running quickly!", Tokenization makes it: ["The", "boys", "are", "running", "quickly", "!"]. After Stop Word removal and Lemmatization, it might become: ["boy", "run", "quick"].' }
+        { type: 'h1', content: '2. Features in Computer Vision' },
+        { type: 'p', content: 'AI models do not look at an image as a whole; they look for distinct "features".' },
+        { type: 'definition', term: 'Feature', definition: 'A measurable piece of data in an image which is unique to that specific object. It could be a specific color, a sharp edge, a corner, a shape, or a texture.' },
+        { type: 'p', content: 'For example, the features of a human face include the distance between the eyes, the shape of the jawline, and the depth of the eye sockets. Facial Recognition algorithms measure these specific geometric features.' }
       ]
     },
     {
       pageNumber: 3,
       blocks: [
-        { type: 'h1', content: 'Text Representation (Vectorization) & TF-IDF' },
-        { type: 'p', content: 'Once normalized, words must be converted into numerical vectors so the AI can process them mathematically.' },
-        { type: 'h2', content: '1. Bag of Words (BoW)' },
-        { type: 'p', content: 'BoW creates a "vocabulary" of all unique words and counts how many times each word appears in a specific document. However, BoW treats all words equally and ignores the context.' },
-        { type: 'h2', content: '2. TF-IDF (Term Frequency - Inverse Document Frequency)' },
-        { type: 'p', content: 'TF-IDF is an advanced technique that solves BoW\'s limitations by evaluating how IMPORTANT a word is to a specific document within a larger collection (corpus).' },
+        { type: 'h1', content: '3. Core Computer Vision Tasks' },
+        { type: 'p', content: 'Different AI applications require different levels of image understanding.' },
         { type: 'ul', items: [
-          'Term Frequency (TF): How frequently a term appears in a document. (Frequency of word / Total words in document)',
-          'Document Frequency (DF): The number of documents containing the word.',
-          'Inverse Document Frequency (IDF): Measures how rare or informative a term is across the entire corpus. Words that appear in almost all documents get a low IDF. (Log of Total documents / Documents with the term)',
-          'TF-IDF Score: TF multiplied by IDF.'
-        ]},
-        { type: 'callout', style: 'important', content: 'A High TF-IDF Score means the word appears many times in THIS document, but rarely in OTHER documents. This indicates that the word is a highly relevant "keyword" for understanding this specific document!' }
-      ]
-    },
-    {
-      pageNumber: 4,
-      blocks: [
-        { type: 'h1', content: 'Applications of NLP' },
-        { type: 'ul', items: [
-          'Sentiment Analysis: Automatically identifying whether a customer review is positive, negative, or neutral.',
-          'Chatbots and Virtual Assistants: Siri, Google Assistant, and customer service bots that understand spoken/typed requests.',
-          'Machine Translation: Tools like Google Translate converting text from one language to another while preserving context.',
-          'Email Spam Filtering: Scanning emails for suspicious keywords to automatically route them to the spam folder.',
-          'Text Summarization: Automatically condensing long articles into short summaries (NLG).'
+          'Image Classification: The simplest task. The AI assigns a single label to the entire image. (e.g., "This image contains a Cat").',
+          'Object Detection: The AI identifies multiple specific objects within the image and draws a bounding box around each one. (e.g., A self-driving car identifying a pedestrian, a stop sign, and another car simultaneously).',
+          'Semantic Segmentation: The most complex task. The AI classifies every single pixel in the image to a specific category, tracing the exact boundary/shape of the object without just drawing a box.'
         ]}
       ]
     }

@@ -1,4 +1,9 @@
-import { NativeChapter } from '../types/content';
+const fs = require('fs');
+const path = require('path');
+
+const dbFile = path.join(__dirname, 'src/data/database.ts');
+
+const newContent = `import { NativeChapter } from '../types/content';
 import { chapter_ai_models } from './chapters/chapter_ai_models';
 import { chapter_cv } from './chapters/chapter_cv';
 import { chapter_ent } from './chapters/chapter_ent';
@@ -20,3 +25,7 @@ export const CHAPTER_DATABASE: NativeChapter[] = [
   chapter_ict,
   chapter_self
 ];
+`;
+
+fs.writeFileSync(dbFile, newContent);
+console.log("Database index updated.");
