@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import { Environment } from '@react-three/drei';
 import { LiquidCanvas } from './LiquidCanvas';
 import { NoteNodes } from './NoteNodes';
 import { useNotes } from '../hooks/useNotes';
@@ -68,6 +69,7 @@ export function Scene() {
       />
       
       <CameraRig />
+      <Environment preset="city" />
       <LiquidCanvas />
       <NoteNodes notes={notes} />
     </Canvas>

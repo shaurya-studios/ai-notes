@@ -50,11 +50,11 @@ const fragmentShader = `
     fresnel = pow(fresnel, 3.0);
     
     // Base dark satin/ink color
-    vec3 baseColor = vec3(0.02, 0.02, 0.02); 
+    vec3 baseColor = vec3(0.05, 0.05, 0.06); 
     // Specular silver reflection
-    vec3 reflectionColor = vec3(0.25, 0.28, 0.35); 
+    vec3 reflectionColor = vec3(0.4, 0.45, 0.55); 
     
-    vec3 finalColor = mix(baseColor, reflectionColor, fresnel);
+    vec3 finalColor = mix(baseColor, reflectionColor, fresnel * 1.5);
     
     gl_FragColor = vec4(finalColor, 1.0);
   }
@@ -87,6 +87,7 @@ export function LiquidCanvas() {
         fragmentShader={fragmentShader}
         uniforms={uniforms}
         wireframe={false}
+        extensions={{ derivatives: true }}
       />
     </mesh>
   );
